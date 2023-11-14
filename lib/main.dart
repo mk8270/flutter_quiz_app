@@ -12,8 +12,8 @@ void main() {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color.fromARGB(255, 33, 9, 75),
-                Color.fromARGB(255, 157, 124, 214),
+                Color.fromARGB(186, 116, 76, 196),
+                Color.fromARGB(255, 77, 41, 240)
               ],
             ),
           ),
