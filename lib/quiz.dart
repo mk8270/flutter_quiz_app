@@ -20,7 +20,7 @@ class _QuizState extends State<Quiz> {
 
   @override
   Widget build(BuildContext context) {
-    // 
+    //
     Widget screenWidget = StratScreen(switchScreen);
     if (activeScreen == 'QuestSceen') {
       screenWidget = const QuestionsScreen();
