@@ -10,9 +10,17 @@ class QuestionsScreen extends StatefulWidget {
 }
 
 class _QuestionsScreenState extends State<QuestionsScreen> {
+  var currentQuiestionIndex = 0;
+
+  void onTapAnswers() {
+    setState(() {
+      currentQuiestionIndex++;
+    });
+  }
+
   @override
   Widget build(BuildContext context) {
-    final question = questions[0];
+    final question = questions[currentQuiestionIndex];
     return Container(
       margin: const EdgeInsets.all(40),
       child: Column(
@@ -35,7 +43,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           ...question.getShuffiledAnswer().map(
                 (e) => AnswerButton(
                   answers: e,
-                  onTap: () {},
+                  onTap: onTapAnswers,
                 ),
               ),
         ],
